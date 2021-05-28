@@ -1,0 +1,103 @@
+---
+all:
+  children:
+    Production:  
+      children:
+        Marlborough: 
+          children:
+            ANSIBLETEST:
+              children:
+                RFLXANSTST201:
+                  children:
+                    RFLXANSTST201_WAS_NODES:
+                      hosts:
+                        rflxanstst201:
+                          WAS_DEPLOY_NODE: true
+                          WAR_FILE_DIR: /mount/deploy/INTG/EAR
+                          WAS_NODE: true
+                          reflexis_rwsolc_jvm_count: 1
+                          reflexis_rwsbth_jvm_count: 1
+                          reflexis_knl_jvm_count: 1
+                    RFLXANSTST201_NTY_NODES:
+                      hosts:
+                        rflxanstst201:
+                          NTY_NODE: true
+                    RFLXANSTST201_WEB_NODES:
+                      hosts:
+                        rflxanstst201:
+                          WEB_NODE: true
+                          COGNOS_WEB_NODE: true
+                    RFLXANSTST201_COGNOS_NODES:
+                      hosts:
+                        rflxanstst201:
+                              COGNOS_MASTER_NODE: true
+                              COGNOS_INSTALL_PATH: '/application/IBM/cognos/c10_64'
+                RFLXSUTDEMO36:
+                  children:
+                    RFLXSUTDEMO36_WAS_NODES:
+                      hosts:
+                        rflxsutdemo36:
+                          WAS_DEPLOY_NODE: true
+                          WAS_NODE: true
+                          reflexis_rwsolc_jvm_count: 3
+                          reflexis_rwsbth_jvm_count: 2
+                          reflexis_knl_jvm_count: 1
+                    RFLXSUTDEMO36_NTY_NODES:
+                    RFLXSUTDEMO36_WEB_NODES:
+                      hosts:
+                        rflxsutdemo36:
+                          WEB_NODE: true
+                          COGNOS_WEB_NODE: true
+                    RFLXSUTDEMO36_COGNOS_NODES:
+                      hosts:
+                        rflxsutdemo36:
+                              COGNOS_MASTER_NODE: true
+                              COGNOS_INSTALL_PATH: '/application/IBM/cognos/analytics'
+        Alpharetta:
+          children:
+            RWSDEMO:
+              children:
+                RWS4DEMO05:
+                  children:
+                    RWS4DEMO05_WAS_NODES:
+                      hosts:
+                        rws4demo05:
+                          WAS_DEPLOY_NODE: true
+                          WAS_NODE: true
+                          reflexis_rwsolc_jvm_count: 2
+                          reflexis_rwsbth_jvm_count: 1
+                          reflexis_knl_jvm_count: 1
+                    RWS4DEMO05_NTY_NODES:
+                    RWS4DEMO05_WEB_NODES:
+                      hosts:
+                        rws4demo05:
+                          WEB_NODE: true
+                          COGNOS_WEB_NODE: true
+                    RWS4DEMO05_COGNOS_NODES:
+                      hosts:
+                        rws4demo05:
+                              COGNOS_MASTER_NODE: true
+                              COGNOS_INSTALL_PATH: '/application/IBM/cognos/analytics'
+                              
+                RWS4DEMO08:
+                  children:
+                    RWS4DEMO08_WAS_NODES:
+                      hosts:
+                        rws4demo08:
+                          WAS_DEPLOY_NODE: true
+                          WAS_NODE: true
+                          reflexis_rwsolc_jvm_count: 2
+                          reflexis_rwsbth_jvm_count: 1
+                          reflexis_knl_jvm_count: 1
+                    RWS4DEMO08_NTY_NODES:
+                    RWS4DEMO08_WEB_NODES:
+                      hosts:
+                        rws4demo08:
+                          WEB_NODE: true
+                          COGNOS_WEB_NODE: true
+                    RWS4DEMO08_COGNOS_NODES:
+                      hosts:
+                        rws4demo08:
+                              COGNOS_MASTER_NODE: true
+                              COGNOS_INSTALL_PATH: '/application/IBM/cognos/analytics'
+                              
